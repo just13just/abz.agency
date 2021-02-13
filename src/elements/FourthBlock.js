@@ -1,5 +1,6 @@
 import React from "react"
 import { Button } from "reactstrap"
+import FormContainer from "./FormContainer"
 
 
 const FourthBlock = () => {
@@ -7,14 +8,14 @@ const FourthBlock = () => {
         <div className='fourthBlock'>
             <div className='contentContainer'>
                 <div className='title'>
-                    Lorem ipsum dolor sit
+                    Register to get a work
                 </div>
                 <div className='second-row'>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />
-                    Morbi faucibus tempus ligula eu ornare.
+                    Attention! After successful registration and alert, <br />
+                    update the list of users in the block from the top
                 </div>
                 <div className='form-wrap'>
-
+                    <FormContainer />
                 </div>
                 <div className='button-wrap'>
                     <Button className='btn' color="danger">

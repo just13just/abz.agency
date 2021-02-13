@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { getUsers } from '../redux/usersReducer'
+import { getToken } from '../redux/formReducer'
 import Header from './Header'
 import FirstBlock from './FirstBlock'
 import SecondBlock from './SecondBlock'
@@ -12,8 +13,10 @@ import Footer from './Footer'
 const MainPage = () => {
 
     const dispatch = useDispatch()
+
     useEffect(() => {
         dispatch(getUsers())
+        dispatch(getToken())
     }, [])
 
     return (

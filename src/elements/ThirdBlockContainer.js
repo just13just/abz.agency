@@ -6,15 +6,15 @@ import ThirdBlock from "./ThirdBlock"
 const ThirdBlockContainer = () => {
 
     const [pageNum, setPageNum] = useState(2)
-    const users = useSelector(state => state.users)
-    const total_pages_count = useSelector(state => state.total_pages_count)
+    const users = useSelector(state => state.usersPage.users)
+    const total_pages_count = useSelector(state => state.usersPage.total_pages_count)
     const dispatch = useDispatch()
 
     const showMore = () => {
         dispatch(getUsers(pageNum))
         setPageNum(pageNum + 1)
     }
-    
+
     return <ThirdBlock
         showMore={showMore}
         users={users}
