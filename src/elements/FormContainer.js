@@ -1,12 +1,12 @@
 import React from "react"
-import Form from "./Form"
+import FormComponent from "./FormComponent"
 
 
 const FormContainer = () => {
 
 
     return (
-        <Form
+        <FormComponent
 
         />
     )
