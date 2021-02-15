@@ -74,10 +74,9 @@ export const saveUser = (value, token) => {
             const data = await res.json()
             if (data.success) {
                 dispatch(getUsers())
-                // return true
+                return { 'isSuccess': true }
             } else {
-                console.error(data.message)
-                // return false 
+                return { 'isSuccess': false, 'message': data.message }
             }
         } catch (err) {
             console.error(err)

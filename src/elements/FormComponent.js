@@ -41,18 +41,18 @@ function validatePhone(value) {
     return error
 }
 
-const FormComponent = () => {
+const FormComponent = (props) => {
 
-    const token = useSelector(state => state.formPage.token)
-    const positions = useSelector(state => state.formPage.positions)
-    const dispatch = useDispatch()
-
-
-    const onSubmit = async (val, token) => {
-        dispatch(saveUser(val, token))          // mapDispatchToProps ??
+    const onSubmit = async val => {
+        const res = await props.saveUser(val)
+        if (res.isSuccess) {
+            // showModalPage('You have successfully passed the registration')
+        } else {
+            // showModalPage(res.message)
+        }
     }
 
-    const positionsItems = positions.map(item => {
+    const positionsItems = props.positions.map(item => {
         return <div key={item.id}>
             <label>
                 <Field type="radio" name="picked" value={`${item.id}`} />
@@ -76,7 +76,7 @@ const FormComponent = () => {
                     name: '',
                     email: '',
                     phone: '',
-                    picked: '',
+                    picked: `${1}`,
                     photo: ''
                 }}
                 onSubmit={onSubmit}
@@ -99,7 +99,6 @@ const FormComponent = () => {
                                 validate={validateEmail}
                                 placeholder='Your email' />
                             {errors.email && touched.email && <div>{errors.email}</div>}
-
                         </div>
 
                         <div>
