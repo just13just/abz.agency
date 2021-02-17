@@ -7,9 +7,7 @@ import { Button } from "reactstrap"
 
 const UserForm = ({ onSubmitFunc, positions }) => {
 
-    const onSubmit = val => onSubmitFunc(val)
-
-    const { register, handleSubmit, errors } = useForm({
+    const { register, handleSubmit, errors, reset } = useForm({
         resolver: yupResolver(schema),
         defaultValues: {
             name: '',
@@ -19,6 +17,8 @@ const UserForm = ({ onSubmitFunc, positions }) => {
             photo: undefined
         }
     })
+
+    const onSubmit = val => onSubmitFunc(val, reset)
 
     const positionsItems = positions.map((item) => {
         return <div key={item.id}>

@@ -6,7 +6,7 @@ import { connect } from "react-redux"
 
 const FormContainer = ({ saveUser, token, positions }) => {
 
-    const onSubmitFunc = async values => {
+    const onSubmitFunc = async (values, resetFunc) => {
 
         let data = new FormData()
         data.append("name", values.name)
@@ -19,6 +19,7 @@ const FormContainer = ({ saveUser, token, positions }) => {
         if (res.isSuccess) {
             console.log('success')
             // showModalPage('You have successfully passed the registration')
+            resetFunc(res)
         } else {
             console.log('reject')
             // showModalPage(res.message)
