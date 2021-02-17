@@ -5,7 +5,9 @@ import { schema } from "../util/validators"
 import { Button } from "reactstrap"
 
 
-const UserForm = (props) => {
+const UserForm = ({ onSubmitFunc, positions }) => {
+
+    const onSubmit = val => onSubmitFunc(val)
 
     const { register, handleSubmit, errors } = useForm({
         resolver: yupResolver(schema),
@@ -18,19 +20,7 @@ const UserForm = (props) => {
         }
     })
 
-    const onSubmit = async values => {
-
-        const res = await props.saveUser(values)
-        if (res.isSuccess) {
-            console.log('success')
-            // showModalPage('You have successfully passed the registration')
-        } else {
-            console.log('reject')
-            // showModalPage(res.message)
-        }
-    }
-
-    const positionsItems = props.positions.map((item) => {
+    const positionsItems = positions.map((item) => {
         return <div key={item.id}>
             <label>
                 <input type="radio" name="picked" value={item.id} ref={register} />

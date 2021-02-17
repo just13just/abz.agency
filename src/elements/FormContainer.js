@@ -4,16 +4,31 @@ import { saveUser } from '../redux/formReducer'
 import { connect } from "react-redux"
 
 
-const FormContainer = (props) => {
+const FormContainer = ({ saveUser, token, positions }) => {
 
-    const saveUser = (val) => {
-        return props.saveUser(val, props.token)
+    const onSubmitFunc = async values => {
+
+        let data = new FormData()
+        data.append("name", values.name)
+        data.append("email", values.email)
+        data.append("phone", values.phone)
+        data.append("position_id", values.picked)
+        data.append("photo", values.photo[0])
+
+        const res = await saveUser(data, token)
+        if (res.isSuccess) {
+            console.log('success')
+            // showModalPage('You have successfully passed the registration')
+        } else {
+            console.log('reject')
+            // showModalPage(res.message)
+        }
     }
 
     return (
         <UserForm
-            positions={props.positions}
-            saveUser={saveUser}
+            positions={positions}
+            onSubmitFunc={onSubmitFunc}
         />
     )
 }
