@@ -16,7 +16,7 @@ export const formAPI = {
         data.append("email", values.email)
         data.append("phone", values.phone)
         data.append("position_id", values.picked)
-        data.append("photo", values.photo)
+        data.append("photo", values.photo[0])
         return fetch('https://frontend-test-assignment-api.abz.agency/api/v1/users', {
             method: "post",
             headers: new Headers({

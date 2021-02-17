@@ -1,5 +1,5 @@
 import React from "react"
-import FormComponent from "./FormComponent"
+import UserForm from "./UserForm"
 import { saveUser } from '../redux/formReducer'
 import { connect } from "react-redux"
 
@@ -11,7 +11,7 @@ const FormContainer = (props) => {
     }
 
     return (
-        <FormComponent
+        <UserForm
             positions={props.positions}
             saveUser={saveUser}
         />
