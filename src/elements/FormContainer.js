@@ -1,10 +1,13 @@
-import React from "react"
+import React, { useState } from "react"
 import UserForm from "./UserForm"
 import { saveUser } from '../redux/formReducer'
 import { connect } from "react-redux"
+import ModalPage from "./ModalPage"
 
 
 const FormContainer = ({ saveUser, token, positions }) => {
+
+    const [modal, setModal] = useState(false)
 
     const onSubmitFunc = async (values, resetFunc) => {
 
@@ -17,20 +20,22 @@ const FormContainer = ({ saveUser, token, positions }) => {
 
         const res = await saveUser(data, token)
         if (res.isSuccess) {
-            console.log('success')
-            // showModalPage('You have successfully passed the registration')
+            setModal(res)
             resetFunc(res)
         } else {
-            console.log('reject')
-            // showModalPage(res.message)
+            setModal(res)
         }
     }
 
     return (
-        <UserForm
-            positions={positions}
-            onSubmitFunc={onSubmitFunc}
-        />
+        <div>
+            <ModalPage
+                modal={modal}
+                setModal={setModal} />
+            <UserForm
+                positions={positions}
+                onSubmitFunc={onSubmitFunc} />
+        </div>
     )
 }
 
