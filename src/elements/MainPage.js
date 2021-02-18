@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { getUsers } from '../redux/usersReducer'
 import { getPositions, getToken } from '../redux/formReducer'
 import Header from './Header'
