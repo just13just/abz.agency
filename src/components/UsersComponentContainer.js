@@ -1,9 +1,9 @@
 import React, { useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { getUsers } from "../redux/usersReducer"
-import ThirdBlock from "./ThirdBlock"
+import UsersComponent from "./UsersComponent"
 
-const ThirdBlockContainer = () => {
+const UsersComponentContainer = () => {
 
     const [pageNum, setPageNum] = useState(2)
     const users = useSelector(state => state.usersPage.users)
@@ -15,7 +15,7 @@ const ThirdBlockContainer = () => {
         setPageNum(pageNum + 1)
     }
 
-    return <ThirdBlock
+    return <UsersComponent
         showMore={showMore}
         users={users}
         total_pages_count={total_pages_count}
@@ -23,6 +23,6 @@ const ThirdBlockContainer = () => {
     />
 }
 
-export default ThirdBlockContainer
+export default UsersComponentContainer
 
 

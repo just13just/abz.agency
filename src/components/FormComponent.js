@@ -5,7 +5,7 @@ import { schema } from "../util/validators"
 import { Button } from "reactstrap"
 
 
-const UserForm = ({ onSubmitFunc, positions }) => {
+const FormComponent = ({ onSubmitFunc, positions }) => {
 
     const { register, handleSubmit, errors, reset } = useForm({
         resolver: yupResolver(schema),
@@ -95,4 +95,4 @@ const UserForm = ({ onSubmitFunc, positions }) => {
     )
 }
 
-export default UserForm;
+export default FormComponent;

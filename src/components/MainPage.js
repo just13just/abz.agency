@@ -3,10 +3,10 @@ import { useDispatch } from 'react-redux'
 import { getUsers } from '../redux/usersReducer'
 import { getPositions, getToken } from '../redux/formReducer'
 import Header from './Header'
-import FirstBlock from './FirstBlock'
-import SecondBlock from './SecondBlock'
-import ThirdBlockContainer from './ThirdBlockContainer'
-import FourthBlock from './FourthBlock'
+import AboutMeComponent from './AboutMeComponent'
+import RequirementsComponent from './RequirementsComponent'
+import UsersComponentContainer from './UsersComponentContainer'
+import FormComponentContainer from './FormComponentContainer'
 import Footer from './Footer'
 
 
@@ -24,10 +24,10 @@ const MainPage = () => {
         <div className='main-container'>
             <div className='container'>
                 <Header />
-                <FirstBlock />
-                <SecondBlock />
-                <ThirdBlockContainer />
-                <FourthBlock />
+                <AboutMeComponent />
+                <RequirementsComponent />
+                <UsersComponentContainer />
+                <FormComponentContainer />
                 <Footer />
             </div>
         </div>

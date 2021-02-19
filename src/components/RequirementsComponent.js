@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "react-scroll";
 import manLaptop from "./../assets/man-laptop-v1.svg";
 
-const SecondBlock = () => {
+const RequirementsComponent = () => {
 
     return (
         <div className='secondBlock'>
@@ -26,4 +26,4 @@ const SecondBlock = () => {
     )
 }
 
-export default SecondBlock
+export default RequirementsComponent

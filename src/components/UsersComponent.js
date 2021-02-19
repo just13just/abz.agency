@@ -2,7 +2,7 @@ import React from "react"
 import { Button } from "reactstrap"
 
 
-const ThirdBlock = ({ showMore, users, total_pages_count, pageNum }) => {
+const UsersComponent = ({ showMore, users, total_pages_count, pageNum }) => {
 
     const usersList = users.map((item) => {
         return <div key={item.id} className='user-item'>
@@ -38,4 +38,4 @@ const ThirdBlock = ({ showMore, users, total_pages_count, pageNum }) => {
     )
 }
 
-export default ThirdBlock
+export default UsersComponent

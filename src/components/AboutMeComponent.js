@@ -3,7 +3,7 @@ import banner from "./../assets/banner-photo.jpg";
 import { Button } from 'reactstrap';
 import { Link } from "react-scroll";
 
-const FirstBlock = () => {
+const AboutMeComponent= () => {
 
     return (
         <div className='firstBlock'>
@@ -21,4 +21,4 @@ const FirstBlock = () => {
     )
 }
 
-export default FirstBlock
+export default AboutMeComponent
