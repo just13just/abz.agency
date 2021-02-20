@@ -13,18 +13,16 @@ const usersReducer = (state = initialState, action) => {
     switch (action.type) {
         case SET_USERS:
             return {
-                ...state, users: action.users
-                // ...state, users: action.users.sort((a, b) => {
-                //     return b.registration_timestamp - a.registration_timestamp
-                // })
+                ...state, users: action.users.sort((a, b) => {
+                    return b.registration_timestamp - a.registration_timestamp
+                })
             }
 
         case ADD_USERS:
             return {
-                ...state, users: [...state.users.concat(action.users)]
-                // ...state, users: [...state.users
-                //     .concat(action.users)
-                //     .sort((a, b) => b.registration_timestamp - a.registration_timestamp)]
+                ...state, users: [...state.users
+                    .concat(action.users)
+                    .sort((a, b) => b.registration_timestamp - a.registration_timestamp)]
             }
 
         case SET_TOTAL_PAGES_COUNT:
