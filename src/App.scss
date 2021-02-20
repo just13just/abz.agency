@@ -1,72 +1,14 @@
 .App {
     background-color: gray;
-    min-height      : 100vh;
-    display         : flex;
-    justify-content : center;
 
-    .title {
-        font-size  : 50px;
-        line-height: 54px;
-    }
-}
-
-.main-container {
-    max-width: 1050px;
-    min-width: 1050px !important;
-}
-
-.container {
-    min-width: 100% !important;
-
-    .contentContainer {
-        padding: 0 30px;
-    }
+    // .title {
+    //     font-size  : 50px;
+    //     line-height: 54px;
+    // }
 }
 
 
-.header {
-    height          : 60px;
-    background-color: #fff;
-    display         : flex;
-    justify-content : space-between;
 
-    div {
-        margin: auto 0;
-    }
-}
-
-.firstBlock {
-    position: relative;
-
-    .bannerWrap {
-        img {
-            max-width : 100%;
-            max-height: 100%;
-        }
-    }
-
-    .btn {
-        background-color: #ef5b4c;
-
-        .text {
-            padding    : 0 50px;
-            font-weight: 500;
-        }
-    }
-}
-
-.content {
-    width   : 58%;
-    position: absolute;
-    color   : #fff;
-
-    top: 120px;
-
-    .text,
-    .btn {
-        margin-top: 25px;
-    }
-}
 
 .secondBlock {
     height          : 100vh;
@@ -191,4 +133,25 @@
     text-align      : center;
     border-top      : 1px solid rgb(226, 226, 226);
     padding         : 20px;
+}
+
+
+
+
+
+
+
+
+$minwidth : 360px;
+$mw       : 1170;
+
+.wrapper {
+    min-width: $minwidth;
+    max-width: 2560px;
+}
+
+.container {
+    max-width: $mw + px;
+    margin   : 0 auto;
+    padding  : 0 30px !important;
 }

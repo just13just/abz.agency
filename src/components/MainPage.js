@@ -2,8 +2,8 @@ import React, { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import { getUsers } from '../redux/usersReducer'
 import { getPositions, getToken } from '../redux/formReducer'
-import Header from './Header'
-import AboutMeComponent from './AboutMeComponent'
+import Header from './header/Header'
+import AboutMeComponent from './aboutMe/AboutMeComponent'
 import RequirementsComponent from './RequirementsComponent'
 import UsersComponentContainer from './UsersComponentContainer'
 import FormComponentContainer from './FormComponentContainer'
@@ -21,15 +21,13 @@ const MainPage = () => {
     }, [])
 
     return (
-        <div className='main-container'>
-            <div className='container'>
-                <Header />
-                <AboutMeComponent />
-                <RequirementsComponent />
-                <UsersComponentContainer />
-                <FormComponentContainer />
-                <Footer />
-            </div>
+        <div className='wrapper'>
+            <Header />
+            <AboutMeComponent />
+            <RequirementsComponent />
+            <UsersComponentContainer />
+            <FormComponentContainer />
+            <Footer />
         </div>
     )
 }

@@ -1,0 +1,27 @@
+.aboutMe {
+    &__bg {
+        background-image   : url('./assets/banner-photo.jpg');
+        background-size    : cover;
+        background-position: center;
+        height             : calc(100vh - 60px);
+    }
+}
+
+.content {
+    width      : 60%;
+    height     : 100%;
+    display    : flex;
+    align-items: center;
+    color      : #fff;
+
+    &__title {
+        font-size  : 50px;
+        line-height: 54px;
+        font-weight: 500;
+    }
+
+    &__text,
+    &__button {
+        padding-top: 25px;
+    }
+}
