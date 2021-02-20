@@ -18,7 +18,7 @@ const RequirementsComponent = () => {
                         <div className='first'>I am cool frontend developer</div>
                         <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent consectetur, lacus ut blandit pellentesque, justo tellus varius neque.</div>
                         <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent consectetur, lacus ut blandit pellentesque, justo tellus varius neque, non pellentesque quam metus et tellus.</div>
-                        <div><Link to="formComponent" spy={true} smooth={true}><a href='#'>Sing up now</a></Link></div>
+                        <div><Link to="formComponent" spy={true} smooth={true}>Sing up now</Link></div>
                     </div>
                 </div>
             </div>
