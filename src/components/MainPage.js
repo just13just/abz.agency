@@ -5,7 +5,7 @@ import { getPositions, getToken } from '../redux/formReducer'
 import Header from './header/Header'
 import AboutMeComponent from './aboutMe/AboutMeComponent'
 import RequirementsComponent from './requirements/RequirementsComponent'
-import UsersComponentContainer from './UsersComponentContainer'
+import UsersComponentContainer from './users/UsersComponentContainer'
 import FormComponentContainer from './FormComponentContainer'
 import Footer from './Footer'
 
