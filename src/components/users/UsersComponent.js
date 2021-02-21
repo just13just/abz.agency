@@ -1,20 +1,13 @@
 import React from "react"
 import { Button } from "reactstrap"
+import UserItem from "./userItem/UserItem"
 import style from './Users.module.scss'
 
 
 const UsersComponent = ({ showMore, users, total_pages_count, pageNum }) => {
 
     const usersList = users.map((item) => {
-        return <div key={item.id} className={style.wrapper}>
-            <div className={style.item}>
-                <div className={style.item__avatar}><img src={item.photo} /></div>
-                <div className={style.item__name}>{item.name}</div>
-                <div className={style.item__position}>{item.position}</div>
-                <div className={style.item__email}></div>
-                <div className={style.item__phone}>{item.phone}</div>
-            </div>
-        </div>
+        return <UserItem item={item} key={item.id} />
     })
 
     return (
