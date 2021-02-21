@@ -6,8 +6,8 @@ import Header from './header/Header'
 import AboutMeComponent from './aboutMe/AboutMeComponent'
 import RequirementsComponent from './requirements/RequirementsComponent'
 import UsersComponentContainer from './users/UsersComponentContainer'
-import FormComponentContainer from './FormComponentContainer'
-import Footer from './Footer'
+import FormComponentContainer from './form/FormComponentContainer'
+import Footer from './footer/Footer'
 
 
 const MainPage = () => {
