@@ -4,13 +4,12 @@
     flex-direction  : column;
     align-items     : center;
     justify-content : center;
-    padding         : 150px 0;
+    padding         : 150px 0 !important;
     background-color: #fff;
 }
 
 .text {
-    text-align    : center;
-    padding-bottom: 15px;
+    text-align: center;
 
     &__title {
         font-size  : 50px;
@@ -19,4 +18,24 @@
     }
 }
 
-.form {}
+.form {
+    padding: 30px;
+
+    &__text {
+        margin-top: .25rem;
+        font-size : .875em;
+        color     : #899096;
+    }
+}
+
+.buttonWrap {
+    display        : flex;
+    justify-content: center;
+    padding        : 15px;
+
+    &__text {
+        font-weight  : 500;
+        padding-left : 50px;
+        padding-right: 50px;
+    }
+}
