@@ -1,29 +1,21 @@
-import React from "react"
+import React, { useState } from "react"
 import style from "./UserItem.module.scss";
 import photoCover from './assets/photo-cover.svg'
+import { checkImgSrc } from "../../../util/imgHelper";
 
-
-const brokenLink = 'https://frontend-test-assignment-api.abz.agency/images/placeholders/placeholder.png'
 
 const UserItem = ({ item }) => {
 
-    const checkImgSrc = (src, alt) => {
-        const img = new Image()
-        img.src = src
-        img.onload = () => {
-            return src
-        }
-        img.onerror = () => {
-            return alt
-        }
-    }
+    const [img, setImg] = useState('')
+
+    checkImgSrc(item.photo, photoCover, setImg)
 
     const isLongWord = string => (/\w{20,}/gm.test(string)) ? 'item__name_cutting' : null
 
     return (
         <div className={style.itemWrapper}>
             <div className={style.item}>
-                <div className={style.item__avatar}><img src={item.photo} /></div>
+                <div className={style.item__avatar}><img src={img} /></div>
                 <div className={style.item__name}>
                     <div className={style[isLongWord(item.name)]}>
                         {item.name}
