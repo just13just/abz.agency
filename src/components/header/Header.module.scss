@@ -25,4 +25,13 @@
         list-style-type: none;
         height         : 100%;
     }
+
+    &__link {
+        text-decoration: none !important;
+        color          : #000 !important;
+
+        &:hover {
+            color: #DC143C !important;
+        }
+    }
 }

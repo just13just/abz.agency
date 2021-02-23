@@ -19,7 +19,7 @@ const Header = () => {
                         <li><Button color="link" className={style.menu__link}>Relationships</Button></li>
                         <li><Button color="link" className={style.menu__link}>Requirements</Button></li>
                         <li><Button color="link" className={style.menu__link}>Users</Button></li>
-                        <li><Button color="link" className={style.menu__link}><Link to="formComponent" spy={true} smooth={true}> Sign up</Link></Button></li>
+                        <li><Button color="link" className={style.menu__link}><Link to="formComponent" spy={true} smooth={true}>Sign up</Link></Button></li>
                     </ul>
                 </nav>
             </div>
