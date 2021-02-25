@@ -22,12 +22,14 @@ const MainPage = () => {
 
     return (
         <div className='wrapper'>
-            <Header />
-            <AboutMeComponent />
-            <RequirementsComponent />
-            <UsersComponentContainer />
-            <FormComponentContainer />
-            <Footer />
+            <div className='main-container'>
+                <Header />
+                <AboutMeComponent />
+                <RequirementsComponent />
+                <UsersComponentContainer />
+                <FormComponentContainer />
+                <Footer />
+            </div>
         </div>
     )
 }

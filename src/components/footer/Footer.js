@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <footer className={`${style.footer} container`}>
             <div className={style.footer__text}>
-                © lorem. ipsum dolor sit amet, consectetur adipiscing elit.
+                © abz.agency specially for the test task 
             </div>
         </footer>
     )
