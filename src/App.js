@@ -1,9 +1,8 @@
-import './App.scss';
 import MainPage from './components/MainPage';
 
 function App() {
   return (
-    <div className="App">
+    <div className="site-container">
       <MainPage />
     </div>
   );

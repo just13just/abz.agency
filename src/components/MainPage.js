@@ -21,15 +21,13 @@ const MainPage = () => {
     }, [])
 
     return (
-        <div className='wrapper'>
-            <div className='main-container'>
-                <Header />
-                <AboutMeComponent />
-                <RequirementsComponent />
-                <UsersComponentContainer />
-                <FormComponentContainer />
-                <Footer />
-            </div>
+        <div className='main-container'>
+            <Header />
+            <AboutMeComponent />
+            <RequirementsComponent />
+            <UsersComponentContainer />
+            <FormComponentContainer />
+            <Footer />
         </div>
     )
 }
