@@ -12,24 +12,7 @@ import Footer from './footer/Footer'
 
 const MainPage = () => {
 
-    const dispatch = useDispatch()
 
-    useEffect(() => {
-        dispatch(getUsers())
-        dispatch(getToken())
-        dispatch(getPositions())
-    }, [])
-
-    return (
-        <div className='main-container'>
-            <Header />
-            <AboutMeComponent />
-            <RequirementsComponent />
-            <UsersComponentContainer />
-            <FormComponentContainer />
-            <Footer />
-        </div>
-    )
 }
 
 export default MainPage
