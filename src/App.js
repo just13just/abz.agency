@@ -21,13 +21,15 @@ const App = () => {
   }, [])
 
   return (
-    <div className="site-container">
+    <div className='site-container'>
       <div className='main-container'>
         <Header />
-        <AboutMeComponent />
-        <RequirementsComponent />
-        <UsersComponentContainer />
-        <FormComponentContainer />
+        <main className='main'>
+          <AboutMeComponent />
+          <RequirementsComponent />
+          <UsersComponentContainer />
+          <FormComponentContainer />
+        </main>
         <Footer />
       </div>
     </div>

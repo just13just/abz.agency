@@ -1,5 +1,5 @@
 .site-container {
-    overflow: hidden;
+    background-color: gray;
 }
 
 .main-container {
@@ -13,4 +13,8 @@
     background-color: transparent;
     cursor          : pointer;
     padding         : 0;
+}
+
+.content-container {
+    padding: 0 30px;
 }
