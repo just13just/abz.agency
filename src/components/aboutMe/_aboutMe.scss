@@ -7,12 +7,7 @@
     }
 
     &__container {
-        display    : flex;
-        align-items: center;
-        padding-top        : 107px;
-        width      : 55%;
-        height     : 100%;
-
+        width: 55%;
         color: #fff;
     }
 
@@ -26,9 +21,5 @@
 
     &__description {
         padding-bottom: 34px;
-    }
-
-    &__button-wrap {
-        padding-bottom: 107px;
     }
 }
