@@ -17,6 +17,13 @@
     padding         : 0;
 }
 
+.btn-sing-up {
+    &__text {
+        padding-left : 46px;
+        padding-right: 46px;
+    }
+}
+
 .content-container {
     padding: 0 30px;
 }
