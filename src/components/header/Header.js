@@ -1,4 +1,3 @@
-import { Button } from 'reactstrap';
 import React from "react"
 import logo from "./assets/logo.svg";
 import { Link } from 'react-scroll';
@@ -14,11 +13,15 @@ const Header = () => {
 
                 <nav className='menu__body'>
                     <ul className='menu__list'>
-                        <li><Button color="link" className='menu__link'>About me</Button></li>
-                        <li><Button color="link" className='menu__link'>Relationships</Button></li>
-                        <li><Button color="link" className='menu__link'>Requirements</Button></li>
-                        <li><Button color="link" className='menu__link'>Users</Button></li>
-                        <li><Button color="link" className='menu__link'><Link to="formComponent" spy={true} smooth={true}>Sign up</Link></Button></li>
+                        <li><button color="link" className='menu__link btn'>About me</button></li>
+                        <li><button color="link" className='menu__link btn'>Relationships</button></li>
+                        <li><button color="link" className='menu__link btn'>Requirements</button></li>
+                        <li><button color="link" className='menu__link btn'>Users</button></li>
+                        <li>
+                            <button color="link" className='menu__link btn'>
+                                <Link to="formComponent" spy={true} smooth={true}>Sign up</Link>
+                            </button>
+                        </li>
                     </ul>
                 </nav>
             </div>
