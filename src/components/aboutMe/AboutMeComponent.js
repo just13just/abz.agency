@@ -15,7 +15,7 @@ const AboutMeComponent = () => {
                             We look forward to your submission. Good luck! The photo has to scale in the banner area on the different screens
                         </div>
                         <div className='about-me__button-wrap'>
-                            <button className='sing-up-btn btn-danger btn'>
+                            <button className='btn-sing-up btn-danger btn btn-reset'>
                                 <Link to="formComponent" spy={true} smooth={true}><span className='btn-sing-up__text'>Sing up now</span></Link>
                             </button>
                         </div>
