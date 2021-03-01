@@ -10,6 +10,12 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+.content-container {
+    padding    : 30px;
+    display    : flex;
+    align-items: center;
+}
+
 .btn-reset {
     border          : none;
     background-color: transparent;
@@ -24,8 +30,7 @@
     }
 }
 
-.content-container {
-    padding    : 30px;
-    display    : flex;
-    align-items: center;
+.title {
+    text-align: center;
+    font-size : 50px;
 }

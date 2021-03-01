@@ -1,0 +1,49 @@
+.requirements {
+    display         : flex;
+    align-items     : center;
+    padding-top     : 45px;
+    min-height      : 720px;
+    background-color: #fff;
+
+    &__first-column {
+        padding: 0 30px;
+    }
+
+    &__second-column {
+        padding-left: 15px;
+    }
+
+    &__content-container {
+        display    : flex;
+        padding-top: 60px;
+    }
+
+    &__img-container {
+        width: 338px;
+
+        &_img-size {
+            width: 100%;
+        }
+    }
+}
+
+.text {
+    &__description {
+        font-size  : 24px;
+        line-height: 29px;
+    }
+
+    &__article {
+        padding-top: 20px;
+    }
+
+    &__btn {
+        cursor : pointer;
+        padding: 30px 0;
+        color  : #ef5b4c;
+
+        &:hover {
+            color: #ff0000;
+        }
+    }
+}
