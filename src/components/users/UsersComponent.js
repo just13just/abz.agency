@@ -1,7 +1,5 @@
 import React from "react"
-import { Button } from "reactstrap"
 import UserItem from "./userItem/UserItem"
-import style from './Users.module.scss'
 
 
 const UsersComponent = ({ showMore, users, total_pages_count, pageNum }) => {
@@ -11,29 +9,30 @@ const UsersComponent = ({ showMore, users, total_pages_count, pageNum }) => {
     })
 
     return (
-        <div className={`${style.users} container`}>
-            <div className={style.users__container}>
-
-                <div className={style.users__text}>
-                    <div className={style.text}>
-                        <div className={style.text__title}>Our cheerful users</div>
-                        <div className={style.text__description}>Attention! Sorting people by registration date</div>
+        <section className='users content-container'>
+            <div className='users__content-wrap'>
+                <div>
+                    <div className='title users__title'>
+                        Our cheerful users
+                    </div>
+                    <div className='users__description'>
+                        Attention! Sorting users by registration date
                     </div>
                 </div>
 
-                <div className={style.users__list}>
+                <div className='users__list'>
                     {usersList}
                 </div>
 
-                <div className={style.users__btn}>
+                <div className='users__btn'>
                     {total_pages_count !== pageNum - 1
-                        ? <Button className={style.button} onClick={showMore} color="danger">
-                            <span className={style.button__text}>Show more</span>
-                        </Button>
+                        ? <button className='btn btn-danger btn-reset' onClick={showMore} color="danger">
+                            <span className='users__btn_wide'>Show more</span>
+                        </button>
                         : null}
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 
