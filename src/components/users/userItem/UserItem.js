@@ -1,5 +1,4 @@
 import React, { useState } from "react"
-import style from "./UserItem.module.scss";
 import photoCover from './assets/photo-cover.svg'
 import { checkImgSrc } from "../../../util/imgHelper";
 
@@ -10,26 +9,24 @@ const UserItem = ({ item }) => {
 
     checkImgSrc(item.photo, photoCover, setImg)
 
-    const isLongWord = string => (/\w{20,}/gm.test(string)) ? 'item__name_cutting' : null
+    const isLongWord = string => (/\w{20,}/gm.test(string)) ? 'item__name_cut' : null
 
     return (
-        <div className={style.itemWrapper}>
-            <div className={style.item}>
-                <div className={style.item__avatar}><img src={img} /></div>
-                <div className={style.item__name}>
-                    <div className={style[isLongWord(item.name)]}>
-                        {item.name}
-                    </div>
+        <div className='item-wrapper'>
+            <div className='item'>
+                <div className='item__photo'><img src={img} /></div>
+                <div className={`item__name ${isLongWord(item.name)}`}>
+                    {item.name}
                 </div>
-                <div className={style.item__position}>{item.position}</div>
-                <div className={style.emailWrapper}>
-                    <div className={style.item__email}>
+                <div className='item__position'>{item.position}</div>
+                <div className='item__email email'>
+                    <div className='email__container'>
                         {item.email}
                     </div>
-                    <span className={style.emailWrapper__tooltip}>{item.email}</span>
+                    <span className='email__tooltip'>{item.email}</span>
                 </div>
 
-                <div className={style.item__phone}>{item.phone}</div>
+                <div className='item__phone'>{item.phone}</div>
             </div>
         </div>
     )

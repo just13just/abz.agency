@@ -1,4 +1,4 @@
-.itemWrapper {
+.item-wrapper {
     display        : flex;
     justify-content: center;
 }
@@ -6,38 +6,35 @@
 .item {
     width: 216px;
 
-    &__avatar {
-        padding: 10px;
-
+    &__photo {
         img {
-            border: 2px #fff solid;
+            border       : 2px #fff solid;
             border-radius: 50%;
             width        : 75px;
         }
     }
 
     &__name {
-        padding    : 10px;
+        padding-top: 14px;
         font-size  : 24px;
-        line-height: 29px;
 
-        &_cutting {
+        &_cut {
             white-space  : nowrap;
             overflow     : hidden;
             text-overflow: ellipsis;
         }
     }
+}
 
-    &__email {
+.email {
+    cursor  : pointer;
+    position: relative;
+
+    &__container {
         white-space  : nowrap;
         overflow     : hidden;
         text-overflow: ellipsis;
     }
-}
-
-.emailWrapper {
-    cursor  : pointer;
-    position: relative;
 
     &__tooltip {
         position        : absolute;
