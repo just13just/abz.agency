@@ -34,8 +34,9 @@
         font-size      : 14px !important;
         text-decoration: none !important;
         color          : #000 !important;
-        padding-right: 0;
-        padding-left : 27px;
+        padding-right  : 0;
+        padding-left   : 27px;
+        box-shadow     : none !important;
 
         &:hover {
             color: #DC143C !important;

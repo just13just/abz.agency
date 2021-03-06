@@ -13,10 +13,10 @@ const Header = () => {
 
                 <nav className='menu__body'>
                     <ul className='menu__list'>
-                        <li><button color="link" className='menu__link btn'>About me</button></li>
-                        <li><button color="link" className='menu__link btn'>Relationships</button></li>
-                        <li><button color="link" className='menu__link btn'>Requirements</button></li>
-                        <li><button color="link" className='menu__link btn'>Users</button></li>
+                        <li><button className='menu__link btn'>About me</button></li>
+                        <li><button className='menu__link btn'>Relationships</button></li>
+                        <li><button className='menu__link btn'>Requirements</button></li>
+                        <li><button className='menu__link btn'>Users</button></li>
                         <li>
                             <button color="link" className='menu__link btn'>
                                 <Link to="formComponent" spy={true} smooth={true}>Sign up</Link>
