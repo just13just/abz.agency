@@ -1,11 +1,10 @@
-import React from "react"
-import style from "./Footer.module.scss";
+import React from 'react'
 
 const Footer = () => {
     return (
-        <footer className={`${style.footer} container`}>
-            <div className={style.footer__text}>
-                © abz.agency specially for the test task 
+        <footer className='footer content-container'>
+            <div>
+                &copy;&nbsp;abz.agency specially for the test task
             </div>
         </footer>
     )
