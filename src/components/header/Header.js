@@ -20,16 +20,30 @@ const Header = () => {
                 </div>
                 <nav className={`header__menu ${open ? 'active' : ''}`}>
                     <ul className='header__list'>
-                        <li><a href='#' className='header__link'>About me</a></li>
-                        <li><a href='#' className='header__link'>Relationships</a></li>
-                        <li><a href='#' className='header__link'>Requirements</a></li>
-                        <li><a href='#' className='header__link'>Users</a></li>
                         <li>
-                            <Link
-                                className='header__link'
-                                to="formComponent"
-                                spy={true}
-                                smooth={true}>Sign up</Link>
+                            <div className='header__link'>
+                                <Link to='' spy={true} smooth={true}>About me</Link>
+                            </div>
+                        </li>
+                        <li>
+                            <div className='header__link'>
+                                <Link to='' spy={true} smooth={true}>Relationships</Link>
+                            </div>
+                        </li>
+                        <li>
+                            <div className='header__link'>
+                                <Link to='' spy={true} smooth={true}>Requirements</Link>
+                            </div>
+                        </li>
+                        <li>
+                            <div className='header__link'>
+                                <Link to='' spy={true} smooth={true}>Users</Link>
+                            </div>
+                        </li>
+                        <li>
+                            <div className='header__link'>
+                                <Link to='formComponent' spy={true} smooth={true}>Sign up</Link>
+                            </div>
                         </li>
                     </ul>
                 </nav>
