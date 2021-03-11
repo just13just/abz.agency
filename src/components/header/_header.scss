@@ -140,3 +140,13 @@
         }
     }
 }
+
+@media (max-width: 480px) {
+    .header {
+        padding: 0 5px;
+
+        &__body {
+            height: 40px;
+        }
+    }
+}
