@@ -49,83 +49,80 @@ const FormComponent = ({ onSubmitFunc, positions }) => {
                         list of users in the block from the top</div>
                 </div>
 
+                <form onSubmit={handleSubmit(onSubmit)} className='form'>
+                    <div className='form__name'>
+                        <label
+                            className='form-label'
+                            htmlFor="name">Name</label>
+                        <input
+                            className={errors.name ? 'is-invalid form-control' : 'form-control'}
+                            ref={register}
+                            type='text'
+                            name='name'
+                            placeholder='Your name' />
+                        {errors.name && <div className='text-danger'>{errors.name.message}</div>}
+                    </div>
 
-                <div>
-                    <form onSubmit={handleSubmit(onSubmit)} className='form'>
-                        <div className='form__name'>
-                            <label
-                                className='form-label'
-                                htmlFor="name">Name</label>
+                    <div className='form__email'>
+                        <label
+                            className='form-label'
+                            htmlFor='email'>Email</label>
+                        <input
+                            className={errors.email ? 'is-invalid form-control' : 'form-control'}
+                            ref={register}
+                            type='email'
+                            name='email'
+                            placeholder='Your email' />
+                        {errors.email && <div className='text-danger'>{errors.email.message}</div>}
+                    </div>
+
+                    <div className='form__phone'>
+                        <label
+                            className='form-label'
+                            htmlFor="phone">Phone number</label>
+                        <input
+                            className={errors.phone ? 'is-invalid form-control' : 'form-control'}
+                            ref={register}
+                            type='tel'
+                            name='phone'
+                            placeholder='+380 XX XXX XX XX'
+                            a11e='phoneHelp' />
+                        {errors.phone && <div className='text-danger'>{errors.phone.message}</div>}
+                        <div
+                            className='form__text'
+                            id='phoneHelp'>Enter a phone number in international format</div>
+                    </div>
+
+                    <div className='form__position'>
+                        <label>Select your position</label>
+                        {positionsItems}
+                    </div>
+
+                    <div className='form__photo'>
+                        <label className='form-label'>Photo</label>
+                        <div className='custom-file'>
                             <input
-                                className={errors.name ? 'is-invalid form-control' : 'form-control'}
+                                className={errors.photo ? 'is-invalid custom-file-label form-control' : 'custom-file-label form-control'}
+                                id='inputGroupFile'
                                 ref={register}
-                                type='text'
-                                name='name'
-                                placeholder='Your name' />
-                            {errors.name && <div className='text-danger'>{errors.name.message}</div>}
-                        </div>
-
-                        <div className='form__email'>
+                                type='file'
+                                name='photo' />
                             <label
-                                className='form-label'
-                                htmlFor='email'>Email</label>
-                            <input
-                                className={errors.email ? 'is-invalid form-control' : 'form-control'}
-                                ref={register}
-                                type='email'
-                                name='email'
-                                placeholder='Your email' />
-                            {errors.email && <div className='text-danger'>{errors.email.message}</div>}
+                                className={errors.photo ? 'is-invalid custom-file-label form-control' : 'custom-file-label form-control'}
+                                htmlFor='inputGroupFile'>
+                                {watchPhotoName[0]
+                                    ? watchPhotoName[0].name
+                                    : 'Upload your photo'}</label>
                         </div>
+                        {errors.photo && <div className='text-danger form__photo_error'>{errors.photo.message}</div>}
+                    </div>
 
-                        <div className='form__phone'>
-                            <label
-                                className='form-label'
-                                htmlFor="phone">Phone number</label>
-                            <input
-                                className={errors.phone ? 'is-invalid form-control' : 'form-control'}
-                                ref={register}
-                                type='tel'
-                                name='phone'
-                                placeholder='+380 XX XXX XX XX'
-                                a11e='phoneHelp' />
-                            {errors.phone && <div className='text-danger'>{errors.phone.message}</div>}
-                            <div
-                                className='form__text'
-                                id='phoneHelp'>Enter a phone number in international format</div>
-                        </div>
-
-                        <div className='form__position'>
-                            <label>Select your position</label>
-                            {positionsItems}
-                        </div>
-
-                        <div className='form__photo'>
-                            <label className='form-label'>Photo</label>
-                            <div className='custom-file'>
-                                <input
-                                    className={errors.photo ? 'is-invalid custom-file-label form-control' : 'custom-file-label form-control'}
-                                    id='inputGroupFile'
-                                    ref={register}
-                                    type='file'
-                                    name='photo' />
-                                <label
-                                    className={errors.photo ? 'is-invalid custom-file-label form-control' : 'custom-file-label form-control'}
-                                    htmlFor='inputGroupFile'>
-                                    {watchPhotoName[0]
-                                        ? watchPhotoName[0].name
-                                        : 'Upload your photo'}</label>
-                            </div>
-                            {errors.photo && <div className='text-danger form__photo_error'>{errors.photo.message}</div>}
-                        </div>
-
-                        <div className='form__button-wrap'>
-                            <button className='btn-sing-up btn btn-danger btn-reset' type='submit'>
-                                <span className='btn-sing-up__text'>Sign up now</span>
-                            </button>
-                        </div>
-                    </form>
-                </div>
+                    <div className='form__button-wrap'>
+                        <button className='btn-sing-up btn btn-danger btn-reset' type='submit'>
+                            <span className='btn-sing-up__text'>Sign up now</span>
+                        </button>
+                    </div>
+                </form>
             </div>
         </section>
     )
