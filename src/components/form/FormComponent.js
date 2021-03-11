@@ -57,12 +57,12 @@ const FormComponent = ({ onSubmitFunc, positions }) => {
                                 className='form-label'
                                 htmlFor="name">Name</label>
                             <input
-                                className='form-control'
+                                className={errors.name ? 'is-invalid form-control' : 'form-control'}
                                 ref={register}
                                 type='text'
                                 name='name'
                                 placeholder='Your name' />
-                            {errors.name && <p>{errors.name.message}</p>}
+                            {errors.name && <div className='text-danger'>{errors.name.message}</div>}
                         </div>
 
                         <div className='form__email'>
@@ -70,12 +70,12 @@ const FormComponent = ({ onSubmitFunc, positions }) => {
                                 className='form-label'
                                 htmlFor='email'>Email</label>
                             <input
-                                className='form-control'
+                                className={errors.email ? 'is-invalid form-control' : 'form-control'}
                                 ref={register}
                                 type='email'
                                 name='email'
                                 placeholder='Your email' />
-                            {errors.email && <p>{errors.email.message}</p>}
+                            {errors.email && <div className='text-danger'>{errors.email.message}</div>}
                         </div>
 
                         <div className='form__phone'>
@@ -83,13 +83,13 @@ const FormComponent = ({ onSubmitFunc, positions }) => {
                                 className='form-label'
                                 htmlFor="phone">Phone number</label>
                             <input
-                                className='form-control'
+                                className={errors.phone ? 'is-invalid form-control' : 'form-control'}
                                 ref={register}
                                 type='tel'
                                 name='phone'
                                 placeholder='+380 XX XXX XX XX'
                                 a11e='phoneHelp' />
-                            {errors.phone && <div>{errors.phone.message}</div>}
+                            {errors.phone && <div className='text-danger'>{errors.phone.message}</div>}
                             <div
                                 className='form__text'
                                 id='phoneHelp'>Enter a phone number in international format</div>
@@ -104,19 +104,19 @@ const FormComponent = ({ onSubmitFunc, positions }) => {
                             <label className='form-label'>Photo</label>
                             <div className='custom-file'>
                                 <input
-                                    className='custom-file-input form-control'
+                                    className={errors.photo ? 'is-invalid custom-file-label form-control' : 'custom-file-label form-control'}
                                     id='inputGroupFile'
                                     ref={register}
                                     type='file'
                                     name='photo' />
                                 <label
-                                    className='custom-file-label'
+                                    className={errors.photo ? 'is-invalid custom-file-label form-control' : 'custom-file-label form-control'}
                                     htmlFor='inputGroupFile'>
                                     {watchPhotoName[0]
                                         ? watchPhotoName[0].name
                                         : 'Upload your photo'}</label>
-                                {errors.photo && <p>{errors.photo.message}</p>}
                             </div>
+                            {errors.photo && <div className='text-danger form__photo_error'>{errors.photo.message}</div>}
                         </div>
 
                         <div className='form__button-wrap'>
