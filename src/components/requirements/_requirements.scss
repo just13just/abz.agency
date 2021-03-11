@@ -42,9 +42,9 @@
     }
 
     &__btn {
-        cursor : pointer;
-        padding: 30px 0;
-        color  : #ef5b4c;
+        cursor     : pointer;
+        padding-top: 30px;
+        color      : #ef5b4c;
 
         &:hover {
             color: #ff0000;
@@ -75,6 +75,42 @@
 
         &__img-container {
             width: 247px;
+        }
+    }
+}
+
+
+@media (max-width: 767px) {
+    .requirements {
+        padding-top   : 70px !important;
+        padding-bottom: 73px !important;
+
+        &__title {
+            font-size: 29px;
+        }
+
+        &__content-container {
+            display    : block;
+            padding-top: 23px;
+        }
+
+        &__img-container {
+            padding-left : 25px;
+            padding-right: 25px;
+            width        : inherit;
+        }
+
+        &__second-column {
+            padding-top  : 35px;
+            padding-left : 5px;
+            padding-right: 5px;
+        }
+    }
+
+    .text {
+        &__btn {
+            display        : flex;
+            justify-content: center;
         }
     }
 }
