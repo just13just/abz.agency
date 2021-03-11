@@ -40,15 +40,13 @@ const FormComponent = ({ onSubmitFunc, positions }) => {
 
     return (
         <section className='form-wrapper content-container' id='formComponent'>
-            <div>
+            <div className='form-wrapper_center'>
                 <div className='form-wrapper__text'>
-                    <div className='title'>
-                        Register to get a work
-                </div>
+                    <div className='title form-title'>
+                        Register to get a work</div>
                     <div className='form-description'>
-                        Attention! After successful registration and alert, update the<br />
-                        list of users in the block from the top
-                </div>
+                        Attention! After successful registration and alert, update the <br />
+                        list of users in the block from the top</div>
                 </div>
 
 
