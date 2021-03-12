@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import FormComponent from "./FormComponent"
 import { saveUser } from '../../redux/formReducer'
 import { connect } from "react-redux"
-import ModalPage from "../ModalPage"
+import ModalPage from "../modal/ModalPage"
 
 
 const FormComponentContainer = ({ saveUser, token, positions }) => {
@@ -29,9 +29,10 @@ const FormComponentContainer = ({ saveUser, token, positions }) => {
 
     return (
         <div>
-            <ModalPage
-                modal={modal}
-                setModal={setModal} />
+            {modal &&
+                <ModalPage
+                    modal={modal}
+                    setModal={setModal} />}
             <FormComponent
                 positions={positions}
                 onSubmitFunc={onSubmitFunc} />
