@@ -6,3 +6,9 @@ export const isMobile = () => {
     }
     return 6
 }
+
+export const blockScroll = (boolean) => {
+    boolean
+        ? document.body.style.overflow = "hidden"
+        : document.body.style.overflow = "scroll"
+}

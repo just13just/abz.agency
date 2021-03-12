@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react'
+import { blockScroll } from '../../util/screenHelper'
 
 
 const ModalPage = ({ modal, setModal }) => {
 
     useEffect(() => {
-        modal
-            ? document.body.style.overflow = "hidden"
-            : document.body.style.overflow = "scroll"
+        blockScroll(modal)
+        return () => blockScroll(false)
     }, [modal])
 
     return (

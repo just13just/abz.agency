@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from "react"
 import logo from "./assets/logo.svg";
 import { Link } from 'react-scroll';
+import { blockScroll } from "../../util/screenHelper";
 
 const Header = () => {
 
     const [open, setOpen] = useState(false)
 
     useEffect(() => {
-        open
-            ? document.body.style.overflow = "hidden"
-            : document.body.style.overflow = "scroll"
+        blockScroll(open)
     }, [open])
 
     return (
