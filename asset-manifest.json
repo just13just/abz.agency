@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/abz.agency/static/css/main.2bdf1249.chunk.css",
+    "main.js": "/abz.agency/static/js/main.8b0592d4.chunk.js",
+    "main.js.map": "/abz.agency/static/js/main.8b0592d4.chunk.js.map",
+    "runtime-main.js": "/abz.agency/static/js/runtime-main.52c8dfee.js",
+    "runtime-main.js.map": "/abz.agency/static/js/runtime-main.52c8dfee.js.map",
+    "static/css/2.150d169a.chunk.css": "/abz.agency/static/css/2.150d169a.chunk.css",
+    "static/js/2.7a387535.chunk.js": "/abz.agency/static/js/2.7a387535.chunk.js",
+    "static/js/2.7a387535.chunk.js.map": "/abz.agency/static/js/2.7a387535.chunk.js.map",
+    "static/js/3.c64cff99.chunk.js": "/abz.agency/static/js/3.c64cff99.chunk.js",
+    "static/js/3.c64cff99.chunk.js.map": "/abz.agency/static/js/3.c64cff99.chunk.js.map",
+    "index.html": "/abz.agency/index.html",
+    "static/css/2.150d169a.chunk.css.map": "/abz.agency/static/css/2.150d169a.chunk.css.map",
+    "static/css/main.2bdf1249.chunk.css.map": "/abz.agency/static/css/main.2bdf1249.chunk.css.map",
+    "static/js/2.7a387535.chunk.js.LICENSE.txt": "/abz.agency/static/js/2.7a387535.chunk.js.LICENSE.txt",
+    "static/media/style.scss": "/abz.agency/static/media/banner-photo.9614ebc2.jpg",
+    "static/media/logo.d190168a.svg": "/abz.agency/static/media/logo.d190168a.svg",
+    "static/media/man-laptop-v1.bdb026ef.svg": "/abz.agency/static/media/man-laptop-v1.bdb026ef.svg",
+    "static/media/photo-cover.ee434590.svg": "/abz.agency/static/media/photo-cover.ee434590.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.52c8dfee.js",
+    "static/css/2.150d169a.chunk.css",
+    "static/js/2.7a387535.chunk.js",
+    "static/css/main.2bdf1249.chunk.css",
+    "static/js/main.8b0592d4.chunk.js"
+  ]
+}
