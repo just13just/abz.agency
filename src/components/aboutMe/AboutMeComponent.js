@@ -16,7 +16,7 @@ const AboutMeComponent = () => {
                             <div className='about-me__description_mobile'> We kindly remind you that your test assignment should be submitted as a link to github/bitbucket repository.</div>
                         </div>
                         <div className='about-me__button-wrap'>
-                            <button className='btn-sing-up btn-danger btn btn-reset'>
+                            <button className='btn-sing-up btn-danger btn'>
                                 <Link to="formComponent" spy={true} smooth={true}><span className='btn-sing-up__text'>Sing up now</span></Link>
                             </button>
                         </div>

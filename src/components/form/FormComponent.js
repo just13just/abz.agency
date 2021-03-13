@@ -118,7 +118,7 @@ const FormComponent = ({ onSubmitFunc, positions }) => {
                     </div>
 
                     <div className='form__button-wrap'>
-                        <button className='btn-sing-up btn btn-danger btn-reset' type='submit'>
+                        <button className='btn-sing-up btn btn-danger' type='submit'>
                             <span className='btn-sing-up__text'>Sign up now</span>
                         </button>
                     </div>

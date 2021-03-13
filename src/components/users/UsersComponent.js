@@ -26,7 +26,7 @@ const UsersComponent = ({ showMore, users, total_pages_count, pageNum }) => {
 
                 <div className='users__btn'>
                     {total_pages_count !== pageNum - 1
-                        ? <button className='btn btn-danger btn-reset' onClick={showMore} color="danger">
+                        ? <button className='btn btn-danger' onClick={showMore} color="danger">
                             <span className='users__btn_wide'>Show more</span>
                         </button>
                         : null}
