@@ -17,12 +17,7 @@
     &__name {
         padding-top: 14px;
         font-size  : 24px;
-
-        &_cut {
-            white-space  : nowrap;
-            overflow     : hidden;
-            text-overflow: ellipsis;
-        }
+        word-wrap: break-word;
     }
 }
 

@@ -9,13 +9,11 @@ const UserItem = ({ item }) => {
 
     checkImgSrc(item.photo, photoCover, setImg)
 
-    const isLongWord = string => (/\w{20,}/gm.test(string)) ? 'item__name_cut' : null
-
     return (
         <div className='item-wrapper'>
             <div className='item'>
                 <div className='item__photo'><img src={img} /></div>
-                <div className={`item__name ${isLongWord(item.name)}`}>
+                <div className='item__name'>
                     {item.name}
                 </div>
                 <div className='item__position'>{item.position}</div>
